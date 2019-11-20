@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">線上交易系統</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">回測系統</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">即時交易系統</a>
+            </li>
+
+        </ul>
+    </nav>
+    <br>
+
+    <div class="container">
+        <!--右邊欄位-->
+        <div id=sidebar_right style="float: right; width:25%">
+            <form>
+                <label for="currency">比特幣幣值:</label>
+                <select id="currency" name="currency" class="custom-select mb-3">
+                    <option unabled selected>Please Select</option>
+                    <option value="USD">USD</option>
+                    <option value="btc_twd" id="btc_twd">NTD</option>
+                    <option value="HKD">HKD</option>
+                    <option value="RMB">RMB</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </form>
+            <form>
+                <label for="resolution">時間區間:</label>
+                <select id="resolution" name="resolution" class="custom-select mb-3">
+                    <option unabled selected>Please Select</option>
+                    <option value="1m" id="1m">1 min</option>
+                    <option value="5m" id="5m">5 mins</option>
+                    <option value="10m" id="10m">10 mins</option>
+                    <option value="15m" id="15m">15 mins</option>
+                    <option value="1h" id="1h">1 hr</option>
+                    <option value="1w" id="1w">1 week</option>
+                </select>
+            </form>
+            <form>
+                <label for="date">回測期間:</label><br>
+                <input type="date" id="d1">
+                <pre>         ▼</pre>
+                <input type="date" id="d2">
+            </form>
+            <form>
+                <label for="strategy">交易策略:</label>
+                <select id="strategy" name="strategy" class="custom-select mb-3">
+                    <option unabled selected>Please Select</option>
+                    <option value="MS+RSI">MS+RSI</option>
+                    <option value="HKD">HKD</option>
+                    <option value="RMB">RMB</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </form>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+        <!--左邊欄位-->
+        <div sidebar_left style="float:left">
+            <img src="" width="750" height="450">
+            <hr>
+            <h2>Discription</h2>
+            <p><span id="result"></span></p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--引用自己的js-->
+    <script src="index.js"></script>
+</body>
+
+</html>
